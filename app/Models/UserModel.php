@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserModel extends Model
 {
-    use HaSFactory;
+    use HasFactory;
 
     protected $table = 'user';
-    protected $guarded = ['id'];
+    protected $fillable = ['nama', 'nim', 'kelas_id'];
 
     public function kelas()
     {
